@@ -60,9 +60,9 @@
 		F624248C243BAF0200CC888F /* Lab13 */ = {
 			isa = PBXGroup;
 			children = (
-				F624248D243BAF0200CC888F /* main.m */,
 				F6242494243BAF6800CC888F /* PigLatin.h */,
 				F6242495243BAF6800CC888F /* PigLatin.m */,
+				F624248D243BAF0200CC888F /* main.m */,
 			);
 			path = Lab13;
 			sourceTree = "<group>";
