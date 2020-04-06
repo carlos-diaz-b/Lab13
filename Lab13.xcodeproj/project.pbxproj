@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		F624248A243BAF0200CC888F /* Lab13 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab13; sourceTree = BUILT_PRODUCTS_DIR; };
 		F624248D243BAF0200CC888F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F6242494243BAF6800CC888F /* PigLatin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PigLatin.h; sourceTree = SOURCE_ROOT; };
-		F6242495243BAF6800CC888F /* PigLatin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PigLatin.m; sourceTree = SOURCE_ROOT; };
+		F6242494243BAF6800CC888F /* PigLatin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PigLatin.h; path = Lab13/PigLatinization/PigLatin.h; sourceTree = SOURCE_ROOT; };
+		F6242495243BAF6800CC888F /* PigLatin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PigLatin.m; path = Lab13/PigLatinization/PigLatin.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +60,19 @@
 		F624248C243BAF0200CC888F /* Lab13 */ = {
 			isa = PBXGroup;
 			children = (
+				F6242497243BB4ED00CC888F /* PigLatinization */,
+			);
+			path = Lab13;
+			sourceTree = "<group>";
+		};
+		F6242497243BB4ED00CC888F /* PigLatinization */ = {
+			isa = PBXGroup;
+			children = (
 				F6242494243BAF6800CC888F /* PigLatin.h */,
 				F6242495243BAF6800CC888F /* PigLatin.m */,
 				F624248D243BAF0200CC888F /* main.m */,
 			);
-			path = Lab13;
+			path = PigLatinization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
