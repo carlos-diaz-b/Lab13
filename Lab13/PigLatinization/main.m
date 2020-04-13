@@ -12,11 +12,11 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-    NSString *sentence = @"Hello CornerStone";
-    NSLog(@"%@", [sentence stringByPigLatinization]);
-
+        NSString *string = @"Chips";
+        NSLog(@"word: %@",string);
+        string = [string stringByPigLatinization];
+        NSLog(@"result: %@",string);
     }
     return 0;
 }
-
 

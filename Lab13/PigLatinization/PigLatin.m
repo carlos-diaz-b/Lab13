@@ -10,40 +10,31 @@
 
 @implementation NSString (PigLatin)
 
--(NSString *)stringByPigLatinization {
+- (NSString *) stringByPigLatinization {
+    NSString *words = @"";
     
-    NSMutableArray *letters = [[NSMutableArray alloc] initWithCapacity:[self length]];
-    for (int i=0; i < [self length]; i++) {
+    NSCharacterSet *consonants = [NSCharacterSet characterSetWithCharactersInString:@"AEIOUaeiou"];
+    
+    NSMutableArray *consonantPiece = [[self componentsSeparatedByCharactersInSet:consonants] mutableCopy];
+    
+    NSArray *clusters = @[@"Ch", @"Sh", @"Sm", @"St", @"Th", @"Ps", @"Ph", @"Pl", @"Gl"];
+    
+    NSString *Piece = [consonantPiece objectAtIndex:0];
+    NSMutableArray *characters = [[NSMutableArray alloc] initWithCapacity:[self length]];
+                for (int i=0; i < [self length]; i++)
+                    {
         NSString *ichar  = [NSString stringWithFormat:@"%c", [self characterAtIndex:i]];
-        [letters addObject:ichar];
+        [characters addObject:ichar];
+        [clusters componentsJoinedByString:ichar];
     }
-    NSLog(@"letters: %@", [letters componentsJoinedByString:@""]);
-
-    NSCharacterSet *consonants = [NSCharacterSet characterSetWithCharactersInString:@"AEIOUYaeiouy"];
-    
-    NSMutableArray *fragment = [[self componentsSeparatedByCharactersInSet:consonants] mutableCopy];
-    NSString *Piece = [fragment objectAtIndex:0];
-    NSLog(@"Piece: %@", Piece);
-
-    
-    NSMutableArray *fragmentrange = [[NSMutableArray alloc] initWithCapacity:[Piece length]];
-    for (int i=0; i < [Piece length]; i++) {
-        NSString *ichar  = [NSString stringWithFormat:@"%c", [Piece characterAtIndex:i]];
-        [fragmentrange addObject:ichar];
-    }
-    NSLog(@"fragmentrange: %@", [fragmentrange componentsJoinedByString:@""]);
-
-    
     NSRange range = NSMakeRange(0, [Piece length]);
-    
-    [letters removeObjectsInRange:range];
-    
-    [letters addObject:Piece];
-    [letters addObject:@"ay"];
-    
-    NSString *finalWord =  [letters componentsJoinedByString:@""];
-    
-    return finalWord;
+        [characters removeObjectsInRange:range];
+        [characters addObject:Piece];
+        [characters addObject:@"ay"];
+        words = [characters componentsJoinedByString:@""];
+        words = [NSString stringWithFormat:@"%@%@",[[words substringToIndex:1] uppercaseString],[words substringFromIndex:1]];
+   
+    return words;
 }
 
 @end
