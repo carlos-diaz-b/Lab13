@@ -6,7 +6,7 @@
 //  Copyright © 2020 Carlos andres Diaz bravo . All rights reserved.
 //
 
-#import "PigLatin.h"
+#import "PigLatinization.h"
 
 @implementation NSString (PigLatin)
 
