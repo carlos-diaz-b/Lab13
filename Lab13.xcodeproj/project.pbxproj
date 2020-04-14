@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F624248E243BAF0200CC888F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F624248D243BAF0200CC888F /* main.m */; };
-		F6242496243BAF6800CC888F /* PigLatinization.m in Sources */ = {isa = PBXBuildFile; fileRef = F6242495243BAF6800CC888F /* PigLatinization.m */; };
+		F6242496243BAF6800CC888F /* NSString+Piglatin.m in Sources */ = {isa = PBXBuildFile; fileRef = F6242495243BAF6800CC888F /* NSString+Piglatin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		F624248A243BAF0200CC888F /* Lab13 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab13; sourceTree = BUILT_PRODUCTS_DIR; };
 		F624248D243BAF0200CC888F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F6242494243BAF6800CC888F /* PigLatinization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PigLatinization.h; path = Lab13/PigLatinization/PigLatinization.h; sourceTree = SOURCE_ROOT; };
-		F6242495243BAF6800CC888F /* PigLatinization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PigLatinization.m; path = Lab13/PigLatinization/PigLatinization.m; sourceTree = SOURCE_ROOT; };
+		F6242494243BAF6800CC888F /* NSString+Piglatin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+Piglatin.h"; path = "Lab13/PigLatinization/NSString+Piglatin.h"; sourceTree = SOURCE_ROOT; };
+		F6242495243BAF6800CC888F /* NSString+Piglatin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Piglatin.m"; path = "Lab13/PigLatinization/NSString+Piglatin.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +68,8 @@
 		F6242497243BB4ED00CC888F /* PigLatinization */ = {
 			isa = PBXGroup;
 			children = (
-				F6242494243BAF6800CC888F /* PigLatinization.h */,
-				F6242495243BAF6800CC888F /* PigLatinization.m */,
+				F6242494243BAF6800CC888F /* NSString+Piglatin.h */,
+				F6242495243BAF6800CC888F /* NSString+Piglatin.m */,
 				F624248D243BAF0200CC888F /* main.m */,
 			);
 			path = PigLatinization;
@@ -133,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F624248E243BAF0200CC888F /* main.m in Sources */,
-				F6242496243BAF6800CC888F /* PigLatinization.m in Sources */,
+				F6242496243BAF6800CC888F /* NSString+Piglatin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

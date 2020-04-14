@@ -7,7 +7,7 @@
 //
  
 #import <Foundation/Foundation.h>
-#import "PigLatinization.h"
+#import "NSString+Piglatin.h"
 
 
 int main(int argc, const char * argv[]) {

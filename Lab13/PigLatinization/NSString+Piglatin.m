@@ -6,7 +6,7 @@
 //  Copyright © 2020 Carlos andres Diaz bravo . All rights reserved.
 //
 
-#import "PigLatinization.h"
+#import "NSString+Piglatin.h"
 
 @implementation NSString (PigLatin)
 
@@ -15,11 +15,11 @@
     
     NSCharacterSet *consonants = [NSCharacterSet characterSetWithCharactersInString:@"AEIOUaeiou"];
     
-    NSMutableArray *consonantPiece = [[self componentsSeparatedByCharactersInSet:consonants] mutableCopy];
+    NSMutableArray *consonantpiece = [[self componentsSeparatedByCharactersInSet:consonants] mutableCopy];
     
     NSArray *clusters = @[@"Ch", @"Sh", @"Sm", @"St", @"Th", @"Ps", @"Ph", @"Pl", @"Gl"];
     
-    NSString *Piece = [consonantPiece objectAtIndex:0];
+    NSString *piece = [consonantpiece objectAtIndex:0];
     NSMutableArray *characters = [[NSMutableArray alloc] initWithCapacity:[self length]];
                 for (int i=0; i < [self length]; i++)
                     {
@@ -27,9 +27,9 @@
         [characters addObject:ichar];
         [clusters componentsJoinedByString:ichar];
     }
-    NSRange range = NSMakeRange(0, [Piece length]);
+    NSRange range = NSMakeRange(0, [piece length]);
         [characters removeObjectsInRange:range];
-        [characters addObject:Piece];
+        [characters addObject:piece];
         [characters addObject:@"ay"];
         words = [characters componentsJoinedByString:@""];
         words = [NSString stringWithFormat:@"%@%@",[[words substringToIndex:1] uppercaseString],[words substringFromIndex:1]];
